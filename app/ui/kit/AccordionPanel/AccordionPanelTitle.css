@@ -1,0 +1,11 @@
+.AccordionPanelTitle {
+    font-family: var(--brandFontSemiBold);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+
+    padding: 2rem;
+    
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}

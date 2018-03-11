@@ -1,0 +1,30 @@
+.SearchResults {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 32px;
+  li {
+    width: 33.333%;
+  }
+}
+
+.SearchResult {
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+
+.imageWrap {
+  width: 25%;
+  margin-right: 10px;
+}
+
+.avatar {
+  max-width: 100%;
+}
+
+.empty {
+  text-align: center;
+  margin-top: 32px;
+}

@@ -1,0 +1,29 @@
+.TertiaryButton {
+  font-size: 1.4rem;
+  color: var(--primaryColor);
+  padding: 1.3rem 4.2rem;
+  background: white;
+  border: 1px solid var(--primaryColor);
+
+  &:hover {
+    background: white;
+    box-shadow: 0 0 0 0.4rem #00382E;
+  }
+  &:focus {
+    border-color: transparent;
+  }
+
+  &:active {
+    color: white;
+    border-color: transparent;
+  }
+}
+.disabled {
+  background-color:white;
+  color: var(--mediumGreyColor);
+  border: 1px solid var(--lightGreyColor);
+
+  &:hover {
+    box-shadow: 0 0 0 0rem;
+  }
+}

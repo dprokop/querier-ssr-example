@@ -1,0 +1,14 @@
+.List {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listItem {
+    padding: 0;
+    &:last-child {
+        > * {
+            margin-bottom: 0;
+        }
+    }
+}

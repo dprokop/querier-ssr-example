@@ -1,0 +1,27 @@
+.Button {
+  font-size: 1.6rem;
+  font-family: var(--brandFontRegular);
+  text-transform: uppercase;
+  color: white;
+  padding: 2.1rem 5.2rem;
+  background: var(--primaryColor);
+  border: none;
+  transition: all 0.5s ease;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #00382E;
+  }
+  &:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.4rem var(--tertiaryColor);
+  }
+  &:active {
+    background-color: var(--linkColor);
+  }
+}
+
+.disabled {
+  background-color: var(--lightGreyColor);
+  color: var(--mediumGreyColor);
+}

@@ -1,0 +1,28 @@
+.Input {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.label {
+  font-size: 1.6rem;
+  margin-bottom: 0.9rem;
+  font-family: 'HKGrotesk-Regular';
+  color: var(--darkColor);
+}
+
+.inputElement {
+  border: 1px solid var(--lightGreyColor);
+  font-size: 1.6rem;
+  padding: 1.2rem;
+  border-radius: 2px;
+}
+
+.errorMessage {
+  color: var(--errorColor);
+  font-size: 1.2rem;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(100%);
+  padding: 0.2rem;
+}

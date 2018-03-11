@@ -1,0 +1,1 @@
+export const AccordionPanelContent: string;

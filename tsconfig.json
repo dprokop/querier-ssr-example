@@ -1,0 +1,29 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "target": "es2015",
+        "noImplicitAny": true,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "baseUrl": "./",
+        "paths": {
+            "app/*": ["app/*"],
+            "lib/*": ["lib/*"],
+            "services/*": ["app/services/*"],
+            "components/*": ["app/components/*"],
+            "data/*": ["app/data/*"],
+            "ui/*": ["app/ui/*"],
+        },
+        "jsx": "react",
+        "strictNullChecks": true
+    },
+    "include": [
+        "app/**/*",
+        "server/**/*",
+        "lib/**/*"
+    ],
+    "exclude": [
+        "./node_modules/",
+        "**/*/*.stories.tsx"
+    ]
+}
