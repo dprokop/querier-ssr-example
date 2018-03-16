@@ -10,11 +10,11 @@ interface RepositoryDetailsOwnProps {
   id: number;
 }
 
-interface RepositorDetailsInputQueries {
+interface RepositoryDetailsInputQueries {
   repository: RepositoryType;
 }
 
-type RepositoryDetailsProps = WithDataProps<RepositoryDetailsOwnProps, RepositorDetailsInputQueries, {}>;
+type RepositoryDetailsProps = WithDataProps<RepositoryDetailsOwnProps, RepositoryDetailsInputQueries, {}>;
 
 class RepositoryDetails extends React.Component<RepositoryDetailsProps> {
 
@@ -40,7 +40,7 @@ class RepositoryDetails extends React.Component<RepositoryDetailsProps> {
   }
 }
 
-const repositoryDetailsQueries = {
+const repositoryDetailsQueries: DataDependencyDefinition<RepositoryDetailsProps, RepositoryDetailsInputQueries, {}> = {
   inputQueries: {
     repository: {
       query: getRepository
@@ -49,4 +49,4 @@ const repositoryDetailsQueries = {
 };
 
 export default
-  withData<RepositoryDetailsOwnProps, RepositorDetailsInputQueries, {}>(repositoryDetailsQueries)(RepositoryDetails);
+  withData<RepositoryDetailsOwnProps, RepositoryDetailsInputQueries, {}>(repositoryDetailsQueries)(RepositoryDetails);

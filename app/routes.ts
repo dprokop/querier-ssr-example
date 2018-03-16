@@ -3,10 +3,10 @@ import OrganisationPageRoute, { organisationPageQueries } from 'app/components/O
 import ErrorPage from 'components/error/ErrorPage';
 import NotFoundPage from 'components/error/NotFoundPage';
 import { MatchedRoute, RouteConfig } from 'react-router-config';
-import { DataDependenciesDescriptor } from 'querier';
+import { DataDependencyDefinition } from 'querier';
 
 export interface FlokkRouteConfig<P, TInputQueries, TActionQueries> extends RouteConfig {
-  initialData?: DataDependenciesDescriptor<P, TInputQueries, TActionQueries>;
+  initialData?: DataDependencyDefinition<P, TInputQueries, TActionQueries>;
   routes?: Array<FlokkRouteConfig<{}, {}, {}>>;
 }
 
