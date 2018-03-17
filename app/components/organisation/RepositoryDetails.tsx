@@ -2,7 +2,7 @@ import { getRepository, RepositoryType } from 'app/services/octokit';
 import Feedback from 'app/ui/kit/Feedback/Feedback';
 import { TextLabel, TextLabelSmallMediumGrey } from 'app/ui/kit/Typography/TextLabels';
 import * as React from 'react';
-import { withData, WithDataProps } from 'querier';
+import { withData, WithDataProps, DataDependencyDefinition } from 'querier';
 
 const css = require('./RepositoryDetails.css');
 

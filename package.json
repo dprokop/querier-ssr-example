@@ -181,7 +181,7 @@
     }
   },
   "lint-staged": {
-    "gitDir": "../",
+    "gitDir": "./",
     "linters": {
       "**/*.{ts,tsx}": [
         "tslint --fix",
