@@ -1,6 +1,6 @@
 import * as React from 'react';
 const css = require('./List.css');
-import * as classNames from 'classnames';
+import classNames from 'classnames';
 interface ListProps {
   className?: string;
   items: Array<string|{}>; // array of obj and what if I want string

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import * as classNames from 'classnames';
+import classNames from 'classnames';
 const css = require('./AccordionPanelTitle.css');
 import Icon from 'ui/kit/Icon/Icon';
 
