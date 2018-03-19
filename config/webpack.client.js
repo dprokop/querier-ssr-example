@@ -11,6 +11,7 @@ const clientConfig = (env, argv) => {
 
   const entry = DEV ? [
     'normalize.css',
+    'webpack-hot-middleware/client',
     paths.clientEntry
   ] : [
     'normalize.css',
