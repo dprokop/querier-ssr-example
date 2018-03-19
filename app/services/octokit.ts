@@ -1,4 +1,4 @@
-import Github from '@octokit/rest';
+import * as Github from '@octokit/rest';
 
 const octokit = new Github();
 
@@ -10,7 +10,7 @@ const auth = async () => {
   });
 };
 
-const searchOrganisation =
+export const searchOrganisation =
   async (orgName: string): Promise<SearchOrgResults> => {
     await auth();
     const results = await octokit.search.users({
@@ -242,4 +242,3 @@ export type ContributorType = {
 };
 
 export type RepositoryContributorsType = Array<ContributorType>;
-export { searchOrganisation };

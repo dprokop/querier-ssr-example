@@ -1,5 +1,5 @@
 import * as React from 'react';
-import classNames from 'classnames';
+import * as classNames from 'classnames';
 const css = require('./Price.css');
 
 interface PriceProps {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 const css = require('./Popup.css');
 import { CSSTransition } from 'react-transition-group';
-import classNames from 'classnames';
+import * as classNames from 'classnames';
 
 interface PopupProps {
   onClick?: () => void;

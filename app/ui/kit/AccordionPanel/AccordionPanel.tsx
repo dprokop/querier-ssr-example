@@ -2,7 +2,7 @@ import * as React from 'react';
 import AccordionPanelTitle from './AccordionPanelTitle';
 import AccordionPanelContent from './AccordionPanelContent';
 const css = require('./AccordionPanel.css');
-import classNames from 'classnames';
+import * as classNames from 'classnames';
 
 interface AccordionPanelProps {
   className?: string;
