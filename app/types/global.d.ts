@@ -11,7 +11,6 @@ declare interface Window {
 
 declare module 'babel-plugin-universal-import/importCss.js';
 declare module 'babel-plugin-universal-import/universalImport.js';
-declare module 'react-image-magnify';
 
 // Added temporarily as react-hot-loader 4 typings are no there yet
 declare module 'react-hot-loader';
