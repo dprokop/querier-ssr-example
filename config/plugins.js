@@ -4,7 +4,6 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
-const Jarvis = require('webpack-jarvis');
 const  ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 function isExternal(module) {

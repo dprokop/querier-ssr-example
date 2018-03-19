@@ -132,7 +132,6 @@
     "write-file-webpack-plugin": "4.2.0"
   },
   "jest": {
-    "mapCoverage": true,
     "collectCoverageFrom": [
       "app/**/*.{ts,tsx}",
       "server/**/*.{ts,tsx}"

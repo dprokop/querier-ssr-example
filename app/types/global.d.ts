@@ -21,4 +21,3 @@ declare module '*.css' {
   export = classes;
 }
 
-// declare const buildQueryKey: Function;
