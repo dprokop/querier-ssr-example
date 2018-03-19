@@ -16,7 +16,7 @@ const clientConfig = (env, argv) => {
     // loaders.sourceMapsLoaderConfig(),
     {
       oneOf: [
-        loaders.tsLoaderConfig(!DEV),
+        loaders.tsLoaderConfig(true),
         loaders.cssLoaderConfig(true, false, /node_modules/)
       ]
     },
@@ -42,7 +42,7 @@ const clientConfig = (env, argv) => {
     name: SERVER_CONFIG_NAME,
     target: 'node',
     devtool: DEV ? 'cheap-source-map' : 'source-map',
-    entry: ['babel-polyfill', paths.serverEntry],
+    entry: [paths.serverEntry],
     output: {
       path: paths.serverBuildTarget,
       filename: '[name].js',

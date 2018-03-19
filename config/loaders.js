@@ -16,28 +16,28 @@ const tslintLoaderConfig = () => {
   };
 };
 
-const tsLoaderConfig = processWithBabel => {
+const tsLoaderConfig = envNode => {
+  const preset = [
+    ["@babel/preset-env", {
+      "targets": envNode ? {
+        "node": "current"
+      } : {
+        "browsers": ["last 2 versions", "safari >= 7"]
+      }
+    }],
+    "@babel/typescript"
+  ]
   var babelOptions = {
-    plugins: ['syntax-dynamic-import'],
-    presets: [
-      [
-        'es2015',
-        {
-          modules: false
-        }
-      ]
-    ]
+    plugins: ['syntax-dynamic-import', ["@babel/plugin-transform-modules-commonjs", {
+      "allowTopLevelThis": true
+    }]],
+    presets: preset
   };
-  const loaders = processWithBabel ? [{
+
+  const loaders = [{
     loader: 'babel-loader',
     options: babelOptions
   }, {
-    loader: 'ts-loader',
-    options: {
-      configFile: 'tsconfig.webpack.json',
-      transpileOnly: true ,
-    }
-  }] : [ {
     loader: 'ts-loader',
     options: {
       configFile: 'tsconfig.webpack.json',
@@ -144,9 +144,9 @@ const fontLoader = () => {
 module.exports = {
   tslintLoaderConfig,
   tsLoaderConfig,
-  sourceMapsLoaderConfig,
   jsLoaderConfig,
   cssStorybookLoaderConfig,
   cssLoaderConfig,
-  fontLoader
+  fontLoader,
+  sourceMapsLoaderConfig
 };

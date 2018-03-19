@@ -14,7 +14,6 @@ const clientConfig = (env, argv) => {
     paths.clientEntry
   ] : [
     'normalize.css',
-    'babel-polyfill',
     paths.clientEntry
   ];
 
@@ -39,7 +38,7 @@ const clientConfig = (env, argv) => {
         loaders.sourceMapsLoaderConfig(),
         {
           oneOf: [
-            loaders.tsLoaderConfig(!DEV),
+            loaders.tsLoaderConfig(false),
             loaders.cssLoaderConfig(false, true)
           ]
         },
