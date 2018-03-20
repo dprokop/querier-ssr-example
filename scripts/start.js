@@ -8,7 +8,7 @@ try {
   fs.statSync(process.cwd() + '/node_modules');
 } catch (e) {
   console.log('\x1b[31m', '✗ Node modules not installed, running npm install first...\n')
-  child_process.execSync("npm install", { stdio: [0, 1, 2] });
+  child_process.execSync("yarn install", { stdio: [0, 1, 2] });
 }
 
 console.log('\x1b[32m', '✓ Node modules installed, you are almost ready to craft:)\n');

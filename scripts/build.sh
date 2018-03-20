@@ -37,13 +37,13 @@ printf '%s\n' "Building client"
 # Install dependencies
 if [ ! -d "$NODE_MODULES_DIR" ]; then
   echo "Installing deps..."
-  npm install
+  yarn install
 fi
 
 # Run client build
-npm run "build:client"
+yarn run "build:client"
 # Run server build
-npm run "build:server"
+yarn run "build:server"
 
 # Copy config, package.json and server entry
 cp -R config/ build/config
@@ -51,7 +51,7 @@ cp package.json build
 cp server/index.js build/server
 cp server/server.js build
 
-# Inslall prod dependencies build
+# Install prod dependencies build
 pushd "$BUILD_DIR"
-npm install --prod
+yarn install --production
 popd
