@@ -4,8 +4,8 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
-const  ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 function isExternal(module) {
   var context = module.context;
 
@@ -15,6 +15,7 @@ function isExternal(module) {
 
   return context.indexOf('node_modules') !== -1;
 }
+
 const getClientPlugins = () => {
   const DEV = process.env.NODE_ENV === 'development';
 
