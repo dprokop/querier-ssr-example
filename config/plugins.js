@@ -5,7 +5,8 @@ const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-
+const WebpackNotifierPlugin = require('webpack-notifier');
+const getPaths = require('./paths');
 function isExternal(module) {
   var context = module.context;
 
@@ -47,6 +48,7 @@ const getClientPlugins = () => {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.WatchIgnorePlugin([/\.css\.d\.ts$/]),
+    new WebpackNotifierPlugin(),
   ];
 
   const prodPlugins = [
@@ -98,6 +100,7 @@ const getServerPlugins = () => {
     new ForkTsCheckerWebpackPlugin({
       tslint: true,
       workers: 2,
+
     }),
   ];
 
