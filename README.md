@@ -8,7 +8,7 @@ Querier-SSR-Example web is implemented as a SPA with Server Side Rendering(SSR).
 ### Dev server
 To run dev server simply run:
 ```
-npm run start
+yarn start
 ```
 
 **This script will install node modules for you, don't worry:)**
@@ -28,7 +28,7 @@ We use Jest and Enzyme for front-end tests. All tests should reside next to the 
 
 To run tests use following command:
 ```
-npm run test
+yarn run test
 ```
 
 All tests are run on pre-push git hook, so if there are any tests that are not passing, it will stop the push. Sometimes though, especially during early development, you may want to push code, that makes some tests fail. To do so, you can skip the pre-push hook by executing the command with `--no-verify` flag.
