@@ -4,9 +4,9 @@ const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const ExtractCssChunks = require('extract-css-chunks-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const StatsPlugin = require('stats-webpack-plugin');
-const Jarvis = require('webpack-jarvis');
-const  ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
+const getPaths = require('./paths');
 function isExternal(module) {
   var context = module.context;
 
@@ -16,6 +16,7 @@ function isExternal(module) {
 
   return context.indexOf('node_modules') !== -1;
 }
+
 const getClientPlugins = () => {
   const DEV = process.env.NODE_ENV === 'development';
 
@@ -47,6 +48,7 @@ const getClientPlugins = () => {
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
     new webpack.WatchIgnorePlugin([/\.css\.d\.ts$/]),
+    new WebpackNotifierPlugin(),
   ];
 
   const prodPlugins = [
@@ -98,6 +100,7 @@ const getServerPlugins = () => {
     new ForkTsCheckerWebpackPlugin({
       tslint: true,
       workers: 2,
+
     }),
   ];
 

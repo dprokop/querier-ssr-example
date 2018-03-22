@@ -2,6 +2,6 @@
 
 'use strict';
 
-const tsJestPreprocessor = require('ts-jest/preprocessor');
+const tsJestPreprocessor = require('ts-jest-babel-7/preprocessor');
 
 module.exports = tsJestPreprocessor;

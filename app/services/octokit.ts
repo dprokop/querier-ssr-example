@@ -10,7 +10,7 @@ const auth = async () => {
   });
 };
 
-export const searchOrganisation =
+const searchOrganisation =
   async (orgName: string): Promise<SearchOrgResults> => {
     await auth();
     const results = await octokit.search.users({
@@ -20,7 +20,7 @@ export const searchOrganisation =
     return results.data;
   };
 
-export const getOrganisationDetails =
+const getOrganisationDetails =
   async ({ orgName }: { orgName: string }): Promise<OrganisationDetailsType> => {
     await auth();
     const results = await octokit.orgs.get({
@@ -30,7 +30,7 @@ export const getOrganisationDetails =
     return results.data;
   };
 
-export const getOrganisationRepositories =
+const getOrganisationRepositories =
   async ({ orgName }: { orgName: string }): Promise<OrganisationRepositoriesType> => {
     await auth();
     const results = await octokit.repos.getForOrg({
@@ -40,7 +40,7 @@ export const getOrganisationRepositories =
     return results.data;
   };
 
-export const getRepository =
+const getRepository =
   async ({ id }: { id: number }): Promise<RepositoryType> => {
     await auth();
     const result = await octokit.repos.getById({
@@ -49,7 +49,7 @@ export const getRepository =
 
     return result.data;
   };
-export const getRepositoryContributors =
+const getRepositoryContributors =
   async ({ owner, repo }: { owner: string, repo: string }): Promise<RepositoryContributorsType> => {
     await auth();
     const result = await octokit.repos.getContributors({
@@ -109,13 +109,11 @@ export type SearchOrgResult = {
   site_admin: boolean,
   score: number;
 };
-
 export type SearchOrgResults = {
   total_count: number;
   incomplete_results: boolean;
   items: Array<SearchOrgResult>;
 };
-
 export type RepositoryType = {
   id: number,
   name: string,
@@ -217,7 +215,6 @@ export type RepositoryType = {
     pull: boolean
   }
 };
-
 export type OrganisationRepositoriesType = Array<RepositoryType>;
 
 export type ContributorType = {
@@ -242,3 +239,11 @@ export type ContributorType = {
 };
 
 export type RepositoryContributorsType = Array<ContributorType>;
+
+export {
+  searchOrganisation,
+  getOrganisationDetails,
+  getOrganisationRepositories,
+  getRepository,
+  getRepositoryContributors
+};
