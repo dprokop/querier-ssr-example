@@ -2,7 +2,6 @@ import { searchOrganisation, SearchOrgResults } from 'app/services/octokit';
 import SearchBox from 'app/ui/kit/SearchBox/SearchBox';
 import SearchResults from 'app/ui/kit/SearchResults/SearchResults';
 import * as React from 'react';
-import JSONTree from 'react-json-tree';
 import { WithDataProps, withData } from 'querier';
 
 interface HomePageActionQueries {

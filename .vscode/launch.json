@@ -13,8 +13,10 @@
     {
       "type": "node",
       "request": "launch",
+      "protocol": "inspector",
       "name": "Launch Program",
-      "program": "${workspaceFolder}/server/index.js",
+      "program": "${workspaceFolder}/build/server.js",
+      "cwd": "${workspaceFolder}/build",
       "outFiles": [
         "${workspaceFolder}/**/*.js"
       ]

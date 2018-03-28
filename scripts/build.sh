@@ -1,4 +1,4 @@
-  #!/bin/bash
+#!/bin/bash
 
 function parse_git_hash() {
   git rev-parse --short HEAD
@@ -12,8 +12,6 @@ BUILD_DIR=build
 NODE_MODULES_DIR=node_modules
 SHA=$(parse_git_hash)
 DATE=`date '+%Y.%m.%d.%H.%M'`
-
-
 if [ -n "$BUILD_BUILDID" ]; then
   BUILD_NAME="storefront_$BUILD_BUILDID"
 else

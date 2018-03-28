@@ -28,14 +28,20 @@ const tsLoaderConfig = envNode => {
     "@babel/typescript"
   ]
   var babelOptions = {
-    plugins: [
+    plugins: envNode ? [
       'syntax-dynamic-import',
       [
         '@babel/plugin-transform-modules-commonjs', {
           'allowTopLevelThis': true
         }
-      ],
-      'react-hot-loader/babel'
+      ]] : [
+        'syntax-dynamic-import',
+        [
+          '@babel/plugin-transform-modules-commonjs', {
+            'allowTopLevelThis': true
+          }
+        ],
+        'react-hot-loader/babel'
     ],
     presets: preset
   };

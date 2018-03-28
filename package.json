@@ -21,7 +21,6 @@
     "prepush": "npm run test -- --single-run && npm run lint:ts"
   },
   "dependencies": {
-    "@octokit/rest": "^15.2.5",
     "cross-env": "^5.1.4",
     "express": "^4.16.3",
     "express-no-favicons": "0.0.1"
@@ -33,6 +32,7 @@
     "@babel/preset-env": "^7.0.0-beta.42",
     "@babel/preset-react": "^7.0.0-beta.42",
     "@babel/preset-typescript": "^7.0.0-beta.42",
+    "@octokit/rest": "15.0.1",
     "@storybook/addon-actions": "^3.3.15",
     "@storybook/addon-console": "1.0.0",
     "@storybook/react": "^3.3.15",
@@ -120,7 +120,9 @@
     "tslint-react": "3.5.1",
     "typescript": "2.7.2",
     "typings-for-css-modules-loader": "1.7.0",
+    "uglifyjs-webpack-plugin": "1.2.4",
     "webpack": "3.10.0",
+    "webpack-bundle-analyzer": "2.11.1",
     "webpack-dev-middleware": "2.0.4",
     "webpack-flush-chunks": "1.2.3",
     "webpack-format-messages": "^1.0.2",
